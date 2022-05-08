@@ -475,7 +475,6 @@ int main(int argc, char **argv) {
       max_iou = -10.0;
       for (int i = 0; i < objects.size(); i++) {
         now_iou = tracker_iou(Last_obj, objects[i]);
-        fprintf(stderr,"%d:%f\n",i,now_iou);
         if (now_iou > max_iou) {
           max_iou = now_iou;
           track_index = i;
